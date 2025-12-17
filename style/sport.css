@@ -1,0 +1,434 @@
+* {
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: linear-gradient(180deg, #0b0c0d 0%, #121416 100%);
+    color: #b7c0c9;
+    direction: rtl;
+}
+
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: transparent;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* כותרת עליונה / ניווט */
+.header {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2));
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    position: sticky;
+    /* או fixed */
+    top: 0;
+    /* תקוע בחלק העליון */
+    width: 100%;
+    /* כדי שיכסה את כל רוחב המסך */
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.header .logo i {
+    font-size: 20px;
+    color: #ff2f7a
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav a {
+    color: #b7c0c9;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all .15s;
+    font-size: 15px;
+}
+
+.nav a:hover {
+    color: #ffffff;
+    background: #ffffff0a
+}
+
+.btn-join {
+    background: linear-gradient(90deg, #ff2f7a, #ff7ab3);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* תצוגת כותרת ראשית בדף הבית */
+.hero {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .left {
+    max-width: 640px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+}
+
+.hero p {
+    color: #b7c0c9;
+    margin: 0 0 18px 0
+}
+
+.menuim {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    height: 550px;
+    display: flex;
+    /* width: 50px; */
+    /* height: 300 px; */
+
+}
+
+.menuim_all {
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+
+
+}
+
+/* .card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    color: #b7c0c9;
+    text-align: center;
+    padding: 10px;
+    /* width: 300pc; */
+/* height: 600px;
+width: 450px;
+} */
+
+/* .card img {
+
+    width: 50px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    margin: 15px 0;
+} */
+
+.card img {
+    width: 80%;
+    /* התמונה תתפוס 80% מרוחב הכרטיס */
+    max-width: 350px;
+    /* לא יותר מ-350px */
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin: 0 auto;
+    /* מרכז את התמונה אופקית */
+    /* margin-top: auto; */
+    /* דוחף את התמונה לתחתית הכרטיס */
+}
+
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    color: #b7c0c9;
+    padding: 10px;
+    height: 600px;
+    width: 450px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* מפזר תוכן למעלה ולמטה */
+    text-align: center;
+
+}
+
+.card:hover {
+    box-shadow: 0 0 20px #ff2f7a, 0 0 30px #ff2f7a, 0 0 40px #ff2f7a;
+    transition: 0.4s ease;
+}
+
+.card button {
+    width: 60%;
+    height: 25%;
+    /* רבע מגובה הכרטיס */
+    margin: 0 auto;
+    /* מרכז מצד ימין/שמאל */
+    border-radius: 10px;
+}
+
+.card p {
+    margin: 0;
+}
+
+
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* מעברים חלקים */
+}
+
+/* אפקט hover */
+.gallery img:hover {
+    transform: scale(1.05);
+    /* התמונה קצת מתרחבת */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* מוסיף צל */
+    cursor: pointer;
+    /* משנה את הסמן למצב לחיץ */
+}
+
+.box {
+    margin: 0;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box div {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    width: 360px;
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.box:hover div {
+    box-shadow: 0 0 20px #ff2f7a, 0 0 30px #ff2f7a, 0 0 40px #ff2f7a;
+}
+
+
+.info span {
+    margin-left: 10px;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin: 10px 0 6px 0
+}
+
+.card .sub {
+    color: #ff2f7a;
+    font-weight: 700;
+    margin-bottom: 8px
+}
+
+.card .list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0
+}
+
+.card .list span {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* כפתורים בכרטיס */
+.card .cta {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #b7c0c9;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff2f7a, #ff7ab3);
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0 6px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* טפסים בדף צור קשר */
+.contact-form {
+    max-width: 720px;
+    margin: 20px auto 60px;
+    height: 500px;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: #ffffff;
+}
+
+.contact-form label {
+    display: block;
+    margin: 8px 0 4px;
+    color: #b7c0c9;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: transparent;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: #b7c0c9;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* נייד */
+@media (max-width:720px) {
+
+    .header {
+        padding: 10px
+    }
+
+    .mobile-toggle {
+        display: block
+    }
+}
+
+.mobile-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: #b7c0c9;
+    font-size: 20px
+}
+
+.btn btn-primary btn-primarytonn {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.grid {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    /* מרכז אופקית */
+    flex-wrap: wrap;
+    /* מאפשר מעבר שורה אם אין מקום */
+    gap: 20px;
+    /* רווח בין הכרטיסים */
+    margin: 0 auto;
+    /* מרכז את כל הקונטיינר */
+
+}
+
+.video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.send {
+    text-align: center;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .nav a {
+        font-size: 20px;
+        /* קטן יותר */
+        gap: 0;
+        /* אין רווח */
+        justify-content: center;
+    }
+
+    .nav a span {
+        display: none;
+        /* מוסתר הטקסט */
+    }
+}
